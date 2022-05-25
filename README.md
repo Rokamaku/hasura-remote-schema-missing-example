@@ -1,1 +1,1 @@
-Hasura missing mutation after apply metadata reproduce
+Hasura missing mutation after applying metadata reproduce
