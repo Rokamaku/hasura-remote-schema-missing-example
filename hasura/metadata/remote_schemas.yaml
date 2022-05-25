@@ -1,0 +1,32 @@
+- name: SAMPLE_REMOTE
+  definition:
+    url_from_env: REMOTE_ENDPOINT
+    timeout_seconds: 60
+  comment: ""
+  permissions:
+    - role: anonymous
+      definition:
+        schema: |
+          type Beast {
+          	commonName: String
+          	id: ID
+          }
+          type Mutation {
+          	addBeast(beastName: String!): [Beast]
+          }
+          type Query {
+          	beasts: [Beast]
+          }
+    - role: user
+      definition:
+        schema: |
+          type Beast {
+          	commonName: String
+          	id: ID
+          }
+          type Mutation {
+          	addBeast(beastName: String!): [Beast]
+          }
+          type Query {
+          	beasts: [Beast]
+          }
